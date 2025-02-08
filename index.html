@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>نبذة</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #010e09;
+            color: white;
+            font-family: 'Amiri', serif;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        h5, h3 {
+            font-family: 'Amiri', serif;
+            text-align: center;
+        }
+        .social-buttons {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 10px;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .btn-custom {
+            background-color: #0e3631;
+            color: white;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Poppins', sans-serif;
+            width: 100%;
+        }
+        .btn-custom img {
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
+        .social-buttons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        .floating-call {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #0e3631;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 7px 14px rgba(199, 196, 196, 0.2);
+        }
+        .floating-call img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+        /* تصميم المودال */
+        .modal-content {
+            background-color: white;
+            color: black;
+            direction: rtl;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container d-flex flex-column align-items-center mt-5">
+        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img">
+        <h5>الأستاذ والشيخ</h5>
+        <h3>رائد عباس يوسف الخزرجي ( أَبو ضحىٰ )</h3>
+
+        <div class="social-buttons">
+            <!-- زر السيرة الذاتية -->
+            <img src="assets/img/portfolio/about.png" alt="CV">
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#cvModal">
+                <span>السيرة الذاتية</span>
+            </button>
+
+            <img src="assets/img/portfolio/facebook.png" alt="Facebook">
+            <a href="#" class="btn btn-custom"><span>فيسبوك</span></a>
+            <img src="assets/img/portfolio/whatsup.png" alt="WhatsApp">
+            <a href="#" class="btn btn-custom"><span>واتساب</span></a>
+            <img src="assets/img/portfolio/x.png" alt="X">
+            <a href="#" class="btn btn-custom"><span>أكس ( تويتر سابقاً )</span></a>
+            <img src="assets/img/portfolio/tiktok.png" alt="TikTok">
+            <a href="#" class="btn btn-custom"><span>تيك توك</span></a>
+            <img src="assets/img/portfolio/instagram.png" alt="Instagram">
+            <a href="#" class="btn btn-custom"><span>أنستكرام</span></a>
+            <img src="assets/img/portfolio/gmail.png" alt="Gmail">
+            <a href="#" class="btn btn-custom"><span>جيميل</span></a>
+            <img src="assets/img/portfolio/map.png" alt="Location">
+            <a href="#" class="btn btn-custom"><span>الموقع</span></a>
+        </div>
+    </div>
+
+    <!-- زر الاتصال العائم -->
+    <a href="tel:+123456789" class="floating-call" rel="noopener noreferrer">
+        <img src="assets/img/portfolio/call.png" alt="Call">
+    </a>
+    
+    
+
+<!-- مودال السيرة الذاتية -->
+<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-between align-items-center">
+                <h5 class="modal-title mx-auto" id="cvModalLabel">السيرة الذاتية</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                <p><strong>الاسم:</strong> الأستاذ والشيخ رائد عباس يوسف الخزرجي (أبو ضحى)</p>
+                <p><strong>التولد:</strong> بغداد - 1965</p>
+                <p><strong>خريج الجامعة التكنولوجية</strong></p>
+                <p><strong>دبلوم ميكانيك / قسم تصنيع المعادن بغداد 1987-1986</strong></p>
+                
+                <h5>المؤهلات</h5>
+                <ul>
+                    <li>نلت المرتبة الرابعة في التسلسل على دفعتي الدراسية وتم انتخابي للعمل في أهم الدوائر البحثية والعلمية.</li>
+                    <li>عضو اتحاد الصناعات العراقية 2008.</li>
+                    <li>عضو مجموعة الصناعيين العراقيين.</li>
+                    <li>صاحب معامل تصنيع المنتجات البلاستيكية داخل العراق وخارجه.</li>
+                    <li>حاصل على شهادة براءة اختراع (الملكية الصناعية) من الجهاز المركزي للتقييس والسيطرة النوعية سنة 2020.</li>
+                    <li>عضو في غرفة تجارة بغداد منذ 2010، وشاركت في تجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف وفق معايير (ISO)، ومن أبرز الشركات:
+                        <ul>
+                            <li>الشركة العامة لصناعة الزيوت النباتية.</li>
+                            <li>الشركة العامة لصناعة الأدوية والمستلزمات الطبية / سامراء.</li>
+                            <li>مصانع ألبان أبو غريب.</li>
+                        </ul>
+                    </li>
+                    <li>ساهمت في توفير المنتجات والسلع اللدائنية المختلفة ورفد الأسواق المحلية أثناء الحصار الاقتصادي.</li>
+                </ul>
+
+                <h5>النشاط المدني / الإنساني</h5>
+                <ul>
+                    <li>أحد شيوخ ووجهاء قبيلة خزرج منذ 1994، ولنا تاريخ طويل في حل الخلافات بين الناس وإحقاق الحق.</li>
+                    <li>من المؤسسين لموكب أنصار الرسول (ص) في الكاظمية المقدسة، والذي يهدف إلى استقطاب الشباب ونشر القيم الإسلامية.</li>
+                    <li>المساهمة في بناء وتوسيع جامع وحسينية الإمام المنتظر (عج) بمدينة الحرية عام 1998.</li>
+                    <li>التصدي للباطل بالأمر بالمعروف والنهي عن المنكر، وحماية ممتلكات المواطنين بعد سقوط النظام السابق.</li>
+                    <li>مد يد العون للعوائل المتعففة ومساعدتهم على تجاوز المحن وقساوة الحياة من خلال الحقوق الشرعية.</li>
+                    <li>المشاركة في إنقاذ الأرواح خلال جائحة كورونا (2020-2023) عبر تصنيع وتوزيع الأجهزة والمستلزمات الطبية مثل أجهزة إعطاء الأوكسجين والكمامات.</li>
+                    <li>تقديم الدعم اللوجيستي للقوات المسلحة العراقية في حربها ضد داعش بين عامي 2014-2017، ولدينا شهادات تقديرية بذلك.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<div></div>
+<br>
+<br>
+<br>
+<br>
+</body>
+</html>
