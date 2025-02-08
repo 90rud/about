@@ -10,172 +10,159 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         body {
-            background-color: #010e09;
+            background-color: #03484f;
             color: white;
-            font-family: 'Amiri', serif;
-        }
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
-        h5, h3 {
             font-family: 'Amiri', serif;
             text-align: center;
         }
+
+        .profile-img {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h3, h5 {
+            font-family: 'Amiri', serif;
+            color: #f4e142;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
         .social-buttons {
-            display: grid;
-            grid-template-columns: auto 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 10px;
-            align-items: center;
             margin-top: 20px;
         }
+
         .btn-custom {
-            background-color: #0e3631;
+            background-color: rgba(0, 0, 0, 0.2);
             color: white;
             padding: 12px;
             border-radius: 10px;
             font-size: 18px;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Poppins', sans-serif;
-            width: 100%;
+            width: 100vw;
+            max-width: 100%;
+            box-sizing: border-box;
         }
+
         .btn-custom img {
             width: 30px;
             height: 30px;
             margin-left: 10px;
-            border-radius: 5px;
         }
-        .social-buttons img {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-        }
+
         .floating-call {
             position: fixed;
             bottom: 20px;
             left: 20px;
-            background-color: #0e3631;
-            width: 55px;
-            height: 55px;
+            background-color: transparent;
+            width: 65px;
+            height: 65px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0px 7px 14px rgba(199, 196, 196, 0.2);
+            box-shadow: 0px 7px 14px rgba(4, 247, 4, 0.5);
+            overflow: hidden;
         }
+
         .floating-call img {
-            width: 35px;
-            height: 35px;
+            width: 120%;
+            height: 120%;
+            object-fit: cover;
             border-radius: 50%;
         }
-        /* تصميم المودال */
-        .modal-content {
-            background-color: white;
-            color: black;
-            direction: rtl;
-            text-align: right;
-        }
+
     </style>
 </head>
 <body>
 
     <div class="container d-flex flex-column align-items-center mt-5">
-        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img">
-        <h5>الأستاذ والشيخ</h5>
-        <h3>رائد عباس يوسف الخزرجي ( أَبو ضحىٰ )</h3>
+        <!-- تأثير تدريجي على الاسم والصورة -->
+        <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">الشيخ الصناعي </h5>
+        <h3 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">رائد عباس يوسف الخزرجي ( أبو ضحى )</h3>
+        <br>
+        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500" style="box-shadow: 0px 7px 14px #f4e142;
+">
+        <br><br>
+        <a id="cv-button" >
+            <img src="assets/img/portfolio/about.png" >
+            
+        </a>
+       
+        <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
+            <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
+               
+            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">الاسم: الشيخ الصناعي رائد عباس يوسف الخزرجي (أبو ضحىٰ)</p>
+            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="350">التولد: بغداد - 1965</p>
+            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="400">خريج الجامعة التكنولوجية</p>
+            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="450">دبلوم ميكانيك / قسم تصنيع المعادن بغداد 1987-1986</p>
+
+            <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">المؤهلات</h5>
+            <ul >
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">نلت المرتبة الرابعة في التسلسل على دفعتي الدراسية ومن خلالها تم انتخابي للعمل في أهم الدوائر المتخصصة بالبحوث العلمية والتقنية آن ذاك.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو اتحاد الصناعات العراقية 2008.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو مجموعة الصناعيين العراقيين.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">صاحب معامل تصنيع المنتجات البلاستيكية داخل العراق وخارجه.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">حاصل على شهادة براءة اختراع (الملكية الصناعية) من الجهاز المركزي للتقييس والسيطرة النوعية سنة 2020.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">من خلال انتسابي في غرفة تجارة بغداد سنة 2010 شاركت بتجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف وبالمواصفات العالمية المعتمدة (ISO) ومن أهمها:
+                    <ul>
+                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الزيوت النباتية</li>
+                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الأدوية والمستلزمات الطبية / سامراء</li>
+                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">مصانع لبن أبو غريب</li>
+                    </ul>
+                </li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">شاركت بتوفير المنتجات والسلع اللدائنية المختلفة ورفد الأسواق المحلية أثناء الحصار الاقتصادي على بلدنا، مما أثر وبشكل إيجابي على الواقع الصناعي للبلد إلى يومنا هذا.</li>
+            </ul>
+
+            <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">النشاط المدني / الإنساني</h5>
+            <ul data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">أحد شيوخ ووجهاء قبيلة خزرج والمكنى (أبو ضحى الخزرجي) حيث توسمت بتمثيل عمامي منذ عام 1994، وبفضل الله لنا تاريخ طويل في حل الخلافات بين الناس واحقاق الحق ونصرة المظلوم.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) عزاء الكاظمية المقدسة وما له من الأثر الفاعل في استقطاب الشباب وحثهم للحفاظ على الدين الإسلامي والقيم المجتمعية من خلال المحاضرات الإسلامية وأيضا التكاتف وخدمة زوار الإمام الحسين (ع) في جميع العتبات المقدسة ولكافة المناسبات.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">تشرفت بالمشاركة الفعالة والرئيسية في بناء وتوسيع جامع وحسينية الإمام المنتظر (عج) بمدينة الحرية الكريمة عام 1998، وما له من أثر في تثبيت العقائد الدينية والإسلامية والترابط المجتمعي آنذاك وإلى يومنا هذا.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">التصدي للباطل بالأمر بالمعروف والنهي عن المنكر والحفاظ على ممتلكات المواطنين بعد سقوط النظام السابق.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">كان لي الفخر بمد يد العون للكثير من العوائل المتعففة ومساعدتهم لعبور محن الحياة وقساوتها من خلال حقوقنا الشرعية.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">ساهمنا ومن فضل الله في إنقاذ أرواح المواطنين في جائحة كورونا 2020-2023 وذلك بتصنيع وتوزيع الأجهزة والمستلزمات الطبية وأهمها أجهزة إعطاء الأوكسجين والكمامات محلية الصنع.</li>
+                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">ومن واجبنا تجاه الوطن والشعب العراقي استطعنا تزويد القوات الباسلة التي دافعت عن أرضنا في حربها ضد داعش الإرهابي بعد فتوى الجهاد الكفائي بالدعم اللوجيستي سنة 2014-2017 ولنا شهادات تقديرية بذلك.</li>
+            </ul>
+        </div>
 
         <div class="social-buttons">
-            <!-- زر السيرة الذاتية -->
-            <img src="assets/img/portfolio/about.png" alt="CV">
-            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#cvModal">
-                <span>السيرة الذاتية</span>
-            </button>
-
-            <img src="assets/img/portfolio/facebook.png" alt="Facebook">
-            <a href="#" class="btn btn-custom"><span>فيسبوك</span></a>
-            <img src="assets/img/portfolio/whatsup.png" alt="WhatsApp">
-            <a href="#" class="btn btn-custom"><span>واتساب</span></a>
-            <img src="assets/img/portfolio/x.png" alt="X">
-            <a href="#" class="btn btn-custom"><span>أكس ( تويتر سابقاً )</span></a>
-            <img src="assets/img/portfolio/tiktok.png" alt="TikTok">
-            <a href="#" class="btn btn-custom"><span>تيك توك</span></a>
-            <img src="assets/img/portfolio/instagram.png" alt="Instagram">
-            <a href="#" class="btn btn-custom"><span>أنستكرام</span></a>
-            <img src="assets/img/portfolio/gmail.png" alt="Gmail">
-            <a href="#" class="btn btn-custom"><span>جيميل</span></a>
-            <img src="assets/img/portfolio/map.png" alt="Location">
-            <a href="#" class="btn btn-custom"><span>الموقع</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="700" class="btn btn-custom"><img src="assets/img/portfolio/facebook.png" alt="Facebook"><span>فيسبوك</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="750" class="btn btn-custom"><img src="assets/img/portfolio/whatsup.png" alt="WhatsApp"><span>واتساب</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="800" class="btn btn-custom"><img src="assets/img/portfolio/x.png" alt="Twitter"><span>تويتر</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="850" class="btn btn-custom"><img src="assets/img/portfolio/tiktok.png" alt="TikTok"><span>تيك توك</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="900" class="btn btn-custom"><img src="assets/img/portfolio/instagram.png" alt="Instagram"><span>أنستكرام</span></a>
+            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="950" class="btn btn-custom"><img src="assets/img/portfolio/gmail.png" alt="Gmail"><span>جيميل</span></a>
         </div>
     </div>
 
-    <!-- زر الاتصال العائم -->
-    <a href="tel:+123456789" class="floating-call" rel="noopener noreferrer">
+    <a href="tel:+123456789" class="floating-call" data-aos="fade-up" data-aos-duration="400" data-aos-delay="950">
         <img src="assets/img/portfolio/call.png" alt="Call">
     </a>
-    
-    
 
-<!-- مودال السيرة الذاتية -->
-<div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header d-flex justify-content-between align-items-center">
-                <h5 class="modal-title mx-auto" id="cvModalLabel">السيرة الذاتية</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            
-            <div class="modal-body">
-                <p><strong>الاسم:</strong> الأستاذ والشيخ رائد عباس يوسف الخزرجي (أبو ضحى)</p>
-                <p><strong>التولد:</strong> بغداد - 1965</p>
-                <p><strong>خريج الجامعة التكنولوجية</strong></p>
-                <p><strong>دبلوم ميكانيك / قسم تصنيع المعادن بغداد 1987-1986</strong></p>
-                
-                <h5>المؤهلات</h5>
-                <ul>
-                    <li>نلت المرتبة الرابعة في التسلسل على دفعتي الدراسية وتم انتخابي للعمل في أهم الدوائر البحثية والعلمية.</li>
-                    <li>عضو اتحاد الصناعات العراقية 2008.</li>
-                    <li>عضو مجموعة الصناعيين العراقيين.</li>
-                    <li>صاحب معامل تصنيع المنتجات البلاستيكية داخل العراق وخارجه.</li>
-                    <li>حاصل على شهادة براءة اختراع (الملكية الصناعية) من الجهاز المركزي للتقييس والسيطرة النوعية سنة 2020.</li>
-                    <li>عضو في غرفة تجارة بغداد منذ 2010، وشاركت في تجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف وفق معايير (ISO)، ومن أبرز الشركات:
-                        <ul>
-                            <li>الشركة العامة لصناعة الزيوت النباتية.</li>
-                            <li>الشركة العامة لصناعة الأدوية والمستلزمات الطبية / سامراء.</li>
-                            <li>مصانع ألبان أبو غريب.</li>
-                        </ul>
-                    </li>
-                    <li>ساهمت في توفير المنتجات والسلع اللدائنية المختلفة ورفد الأسواق المحلية أثناء الحصار الاقتصادي.</li>
-                </ul>
-
-                <h5>النشاط المدني / الإنساني</h5>
-                <ul>
-                    <li>أحد شيوخ ووجهاء قبيلة خزرج منذ 1994، ولنا تاريخ طويل في حل الخلافات بين الناس وإحقاق الحق.</li>
-                    <li>من المؤسسين لموكب أنصار الرسول (ص) في الكاظمية المقدسة، والذي يهدف إلى استقطاب الشباب ونشر القيم الإسلامية.</li>
-                    <li>المساهمة في بناء وتوسيع جامع وحسينية الإمام المنتظر (عج) بمدينة الحرية عام 1998.</li>
-                    <li>التصدي للباطل بالأمر بالمعروف والنهي عن المنكر، وحماية ممتلكات المواطنين بعد سقوط النظام السابق.</li>
-                    <li>مد يد العون للعوائل المتعففة ومساعدتهم على تجاوز المحن وقساوة الحياة من خلال الحقوق الشرعية.</li>
-                    <li>المشاركة في إنقاذ الأرواح خلال جائحة كورونا (2020-2023) عبر تصنيع وتوزيع الأجهزة والمستلزمات الطبية مثل أجهزة إعطاء الأوكسجين والكمامات.</li>
-                    <li>تقديم الدعم اللوجيستي للقوات المسلحة العراقية في حربها ضد داعش بين عامي 2014-2017، ولدينا شهادات تقديرية بذلك.</li>
-                </ul>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<div></div>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
