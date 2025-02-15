@@ -23,8 +23,9 @@
         }
 
         .profile-img {
-            width: 400px;
-            height: 400px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 20px;
@@ -37,11 +38,16 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
+        ul {
+            text-shadow: 2px 2px 5px rgba(5, 7, 5, 0.5);
+        }
+
         .social-buttons {
             display: flex;
             flex-direction: column;
             gap: 10px;
             margin-top: 20px;
+            align-items: center;
         }
 
         .btn-custom {
@@ -53,16 +59,23 @@
             font-family: 'Poppins', sans-serif;
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 100vw;
-            max-width: 100%;
+            justify-content: right;
+            width: 90%;
+            max-width: 600px;
             box-sizing: border-box;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: rgba(0, 0, 0, 0.4);
         }
 
         .btn-custom img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             margin-left: 10px;
+            margin-right: 20px;
         }
 
         .floating-call {
@@ -88,30 +101,29 @@
             border-radius: 50%;
         }
 
-        /* Fix to ensure the floating call button moves with the page */
-        .floating-call {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-        }
     </style>
 </head>
 <body>
 
-    <div class="container d-flex flex-column align-items-center mt-5">
-        <!-- تأثير تدريجي على الاسم والصورة -->
-        <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">الشيخ الصناعي </h5>
-        <h3 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">رائد عباس يوسف الخزرجي ( أبو ضحى )</h3>
-        <br>
-        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
-        <br><br>
-        <a id="cv-button" >
-            <img src="assets/img/portfolio/about.png" >
-        </a>
-       
-        <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
-            <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
-                <!-- Qualification and Achievements Section -->
+    <div class="container mt-5">
+        <!-- Header Section -->
+        <div class="row text-center">
+            <div class="col-12">
+                <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">الشيخ الصناعي</h5>
+                <h3 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">رائد عباس يوسف الخزرجي ( أبو ضحى )</h3>
+            </div>
+        </div>
+
+        <!-- Image Section -->
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-12">
+                <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
+            </div>
+        </div>
+
+        <!-- Qualifications Section -->
+        <div class="row mt-5">
+            <div class="col-12">
                 <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">المؤهلات</h5>
                 <ul>
                     <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">نلت المرتبة الرابعة بالتسلسل على دفعتي الدراسية ومن خلالها تم انتخابي للعمل في اهم الدوائر المتخصصة بالبحوث العلمية والتقنية آنذاك.</li>
@@ -120,41 +132,70 @@
                     <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو اتحاد الصناعات العراقية (2008).</li>
                     <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو مجموعة الصناعيين العراقيين.</li>
                     <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">حاصل على شهادة براءة اختراع (الملكية الصناعية) في مجال الصناعات اللدائنية من الجهاز المركزي للتقييس والسيطرة النوعية سنة (2020).</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">من خلال انتسابي إﱃ غرفة تجارة بغداد سنة (2010) شاركت بـتجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف ضمن المواصفات القياسية المعتمدة ومن اهم هذه الشركات:</li>
-                    <ul data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
-                        <li>الشركة العامة لصناعة الزيوت النباتية.</li>
-                        <li>الشركة العامة لصناعة اﻻدوية والمستلزمات الطبية / سامراء.</li>
-                        <li>مصانع البان ابو غريب.</li>
-                    </ul>
-                </ul>
-    
-                <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">النشاط المدني والإنساني</h5>
-                <ul>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">أحد شيوخ ووجهاء قبيلة خزرج والمكنى ( أبو ضحى الخزرجي ) حيث تشرفت بتمثيل أعمامي منذ عام (1994).</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">تشرفت بالمشاركة الفعّالة والرئيسية في بناء وتوسيع جامع وحسينية اﻻمام المنتظر (عج) بمدينة الحرية الكريمة عام (1998).</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) الكاظمية المقدسة (مقابل جسر الكريعات).</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">كان لنا الفخر بنشر التعايش السلمي والتصدي للطائفية المذهبية.</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">إسنادنا لفتوى الجهاد الكفائي من خلال الدعم اللوجيستي في جبهات التصدي امام داعش.</li>
-                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">تصنيع وتجهيز المستلزمات الطبية وعلى وجه الخصوص توزيع قناني الأوكسجين خلال فترة جائحة كورونا (2020-2023).</li>
                 </ul>
             </div>
-            <!-- End of Qualifications Section -->
         </div>
 
-        <div class="social-buttons">
-            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="700" class="btn btn-custom"><img src="assets/img/portfolio/facebook.png" alt="Facebook"><span>فيسبوك</span></a>
-            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="750" class="btn btn-custom"><img src="assets/img/portfolio/whatsup.png" alt="WhatsApp"><span>واتساب</span></a>
-            <a href="#" data-aos="fade-up" data-aos-duration="400" data-aos-delay="800" class="btn btn-custom"><img src="assets/img/portfolio/x.png" alt="Twitter"><span>تويتر</span></a>
-            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="850" class="btn btn-custom"><img src="assets/img/portfolio/tiktok.png" alt="TikTok"><span>تيك توك</span></a>
-            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="900" class="btn btn-custom"><img src="assets/img/portfolio/instagram.png" alt="Instagram"><span>أنستكرام</span></a>
-            <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="950" class="btn btn-custom"><img src="assets/img/portfolio/gmail.png" alt="Gmail"><span>جيميل</span></a>
+        <!-- Civil and Humanitarian Activities Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">النشاط المدني والإنساني</h5>
+                <ul>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">أحد شيوخ ووجهاء قبيلة خزرج والمكنى ( أبو ضحى الخزرجي ) حيث تشرفت بتمثيل أعمامي منذ عام (1994).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">تشرفت بالمشاركة الفعّالة والرئيسية في بناء وتوسيع جامع وحسينية اﻻمام المنتظر (عج) بمدينة الحرية الكريمة عام (1998).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) الكاظمية المقدسة (مقابل جسر الكريعات).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">كان لنا الفخر بنشر التعايش السلمي والتصدي للطائفية المذهبية.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">إسنادنا لفتوى الجهاد الكفائي من خلال الدعم اللوجيستي في جبهات التصدي امام داعش.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">تصنيع وتجهيز المستلزمات الطبية وعلى وجه الخصوص توزيع قناني الأوكسجين خلال فترة جائحة كورونا (2020-2023).</li>
+                </ul>
+            </div>
         </div>
-        <br><br><br><br><br><br><br>
+
+        <!-- Social Buttons Section -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="social-buttons">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/12FTNNTscV6/" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/facebook.png" alt="Facebook" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">https://www.facebook.com/share/12FTNNTscV6/</span>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/9647878700078" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/whatsup.png" alt="WhatsApp" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">9647878700078+</span>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://x.com/raed_al5azrjy?t=Yb2q_7obJshnG8bkOQlEmg&s=08" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/x.png" alt="Twitter" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raed_al5azrjy@</span>
+                    </a>
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/@al5azrjy?_t=ZS-8ttHyIjEoVc&_r=1" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/tiktok.png" alt="TikTok" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">https://www.tiktok.com/@al5azrjy?_t=ZS-8ttHyIjEoVc&_r=1</span>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/al5azrjy?utm_source=qr&igsh=MXIxNzY2MGllY3Q1OQ==" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/instagram.png" alt="Instagram" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">al5azrjy@</span>
+                    </a>
+                    <!-- Gmail -->
+                    <a href="mailto:raedkhazraj@gmail.com" class="btn btn-custom w-100 d-flex align-items-center flex-row">
+                        <img src="assets/img/portfolio/gmail.png" alt="Gmail" class="me-3" style="width: 40px; height: 40px;">
+                        <span class="text-truncate" style="font-size: 0.8rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raedkhazraj@gmail.com</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- Floating Call Icon -->
+        <a href="tel:+123456789" class="floating-call">
+            <img src="assets/img/portfolio/call.png" alt="Call">
+        </a>
+
     </div>
-
-    <a href="tel:+123456789" class="floating-call" data-aos="fade-up" data-aos-duration="400" data-aos-delay="950">
-        <img src="assets/img/portfolio/call.png" alt="Call">
-    </a>
 
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
