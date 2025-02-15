@@ -15,7 +15,8 @@
 
     <style>
         body {
-            background-color: #03484f;
+            background: linear-gradient(to right, #4b3a06, #af8200, #4b3a06);
+            background-color: #4b3a06;
             color: white;
             font-family: 'Amiri', serif;
             text-align: center;
@@ -77,6 +78,7 @@
             justify-content: center;
             box-shadow: 0px 7px 14px rgba(4, 247, 4, 0.5);
             overflow: hidden;
+            z-index: 100;
         }
 
         .floating-call img {
@@ -86,6 +88,12 @@
             border-radius: 50%;
         }
 
+        /* Fix to ensure the floating call button moves with the page */
+        .floating-call {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -95,49 +103,42 @@
         <h5 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">الشيخ الصناعي </h5>
         <h3 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">رائد عباس يوسف الخزرجي ( أبو ضحى )</h3>
         <br>
-        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500" style="box-shadow: 0px 7px 14px #f4e142;
-">
+        <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
         <br><br>
         <a id="cv-button" >
             <img src="assets/img/portfolio/about.png" >
-            
         </a>
        
         <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
             <div class="cv-content mt-5" data-aos="fade-up" data-aos-duration="400" data-aos-delay="250">
-               
-            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="300">الاسم: الشيخ الصناعي رائد عباس يوسف الخزرجي (أبو ضحىٰ)</p>
-            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="350">التولد: بغداد - 1965</p>
-            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="400">خريج الجامعة التكنولوجية</p>
-            <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="450">دبلوم ميكانيك / قسم تصنيع المعادن بغداد 1987-1986</p>
-
-            <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">المؤهلات</h5>
-            <ul >
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">نلت المرتبة الرابعة في التسلسل على دفعتي الدراسية ومن خلالها تم انتخابي للعمل في أهم الدوائر المتخصصة بالبحوث العلمية والتقنية آن ذاك.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو اتحاد الصناعات العراقية 2008.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو مجموعة الصناعيين العراقيين.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">صاحب معامل تصنيع المنتجات البلاستيكية داخل العراق وخارجه.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">حاصل على شهادة براءة اختراع (الملكية الصناعية) من الجهاز المركزي للتقييس والسيطرة النوعية سنة 2020.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">من خلال انتسابي في غرفة تجارة بغداد سنة 2010 شاركت بتجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف وبالمواصفات العالمية المعتمدة (ISO) ومن أهمها:
-                    <ul>
-                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الزيوت النباتية</li>
-                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الأدوية والمستلزمات الطبية / سامراء</li>
-                        <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">مصانع لبن أبو غريب</li>
+                <!-- Qualification and Achievements Section -->
+                <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">المؤهلات</h5>
+                <ul>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">نلت المرتبة الرابعة بالتسلسل على دفعتي الدراسية ومن خلالها تم انتخابي للعمل في اهم الدوائر المتخصصة بالبحوث العلمية والتقنية آنذاك.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">أمتلك عدة معامل تصنيع المنتجات البلاستيكية داخل العراق وخارجه.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">شاركت في توفير المنتجات والسلع اللدائنية المختلفة ورفد اﻻسواق المحلية اثناء الحصار اﻻقتصادي على بلدنا الذي بدأ سنة (1990).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو اتحاد الصناعات العراقية (2008).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو مجموعة الصناعيين العراقيين.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">حاصل على شهادة براءة اختراع (الملكية الصناعية) في مجال الصناعات اللدائنية من الجهاز المركزي للتقييس والسيطرة النوعية سنة (2020).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">من خلال انتسابي إﱃ غرفة تجارة بغداد سنة (2010) شاركت بـتجهيز شركات وزارة الصناعة والمعادن بمواد التعبئة والتغليف ضمن المواصفات القياسية المعتمدة ومن اهم هذه الشركات:</li>
+                    <ul data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">
+                        <li>الشركة العامة لصناعة الزيوت النباتية.</li>
+                        <li>الشركة العامة لصناعة اﻻدوية والمستلزمات الطبية / سامراء.</li>
+                        <li>مصانع البان ابو غريب.</li>
                     </ul>
-                </li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">شاركت بتوفير المنتجات والسلع اللدائنية المختلفة ورفد الأسواق المحلية أثناء الحصار الاقتصادي على بلدنا، مما أثر وبشكل إيجابي على الواقع الصناعي للبلد إلى يومنا هذا.</li>
-            </ul>
-
-            <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">النشاط المدني / الإنساني</h5>
-            <ul data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">أحد شيوخ ووجهاء قبيلة خزرج والمكنى (أبو ضحى الخزرجي) حيث توسمت بتمثيل عمامي منذ عام 1994، وبفضل الله لنا تاريخ طويل في حل الخلافات بين الناس واحقاق الحق ونصرة المظلوم.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) عزاء الكاظمية المقدسة وما له من الأثر الفاعل في استقطاب الشباب وحثهم للحفاظ على الدين الإسلامي والقيم المجتمعية من خلال المحاضرات الإسلامية وأيضا التكاتف وخدمة زوار الإمام الحسين (ع) في جميع العتبات المقدسة ولكافة المناسبات.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">تشرفت بالمشاركة الفعالة والرئيسية في بناء وتوسيع جامع وحسينية الإمام المنتظر (عج) بمدينة الحرية الكريمة عام 1998، وما له من أثر في تثبيت العقائد الدينية والإسلامية والترابط المجتمعي آنذاك وإلى يومنا هذا.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">التصدي للباطل بالأمر بالمعروف والنهي عن المنكر والحفاظ على ممتلكات المواطنين بعد سقوط النظام السابق.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">كان لي الفخر بمد يد العون للكثير من العوائل المتعففة ومساعدتهم لعبور محن الحياة وقساوتها من خلال حقوقنا الشرعية.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">ساهمنا ومن فضل الله في إنقاذ أرواح المواطنين في جائحة كورونا 2020-2023 وذلك بتصنيع وتوزيع الأجهزة والمستلزمات الطبية وأهمها أجهزة إعطاء الأوكسجين والكمامات محلية الصنع.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">ومن واجبنا تجاه الوطن والشعب العراقي استطعنا تزويد القوات الباسلة التي دافعت عن أرضنا في حربها ضد داعش الإرهابي بعد فتوى الجهاد الكفائي بالدعم اللوجيستي سنة 2014-2017 ولنا شهادات تقديرية بذلك.</li>
-            </ul>
+                </ul>
+    
+                <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">النشاط المدني والإنساني</h5>
+                <ul>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">أحد شيوخ ووجهاء قبيلة خزرج والمكنى ( أبو ضحى الخزرجي ) حيث تشرفت بتمثيل أعمامي منذ عام (1994).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">تشرفت بالمشاركة الفعّالة والرئيسية في بناء وتوسيع جامع وحسينية اﻻمام المنتظر (عج) بمدينة الحرية الكريمة عام (1998).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) الكاظمية المقدسة (مقابل جسر الكريعات).</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">كان لنا الفخر بنشر التعايش السلمي والتصدي للطائفية المذهبية.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">إسنادنا لفتوى الجهاد الكفائي من خلال الدعم اللوجيستي في جبهات التصدي امام داعش.</li>
+                    <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="650">تصنيع وتجهيز المستلزمات الطبية وعلى وجه الخصوص توزيع قناني الأوكسجين خلال فترة جائحة كورونا (2020-2023).</li>
+                </ul>
+            </div>
+            <!-- End of Qualifications Section -->
         </div>
 
         <div class="social-buttons">
@@ -148,6 +149,7 @@
             <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="900" class="btn btn-custom"><img src="assets/img/portfolio/instagram.png" alt="Instagram"><span>أنستكرام</span></a>
             <a href="#" data-aos="fade-up" data-aos-duration="200" data-aos-delay="950" class="btn btn-custom"><img src="assets/img/portfolio/gmail.png" alt="Gmail"><span>جيميل</span></a>
         </div>
+        <br><br><br><br><br><br><br>
     </div>
 
     <a href="tel:+123456789" class="floating-call" data-aos="fade-up" data-aos-duration="400" data-aos-delay="950">
@@ -159,13 +161,5 @@
     <script>
         AOS.init();
     </script>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 </body>
 </html>
