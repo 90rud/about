@@ -1,256 +1,128 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>نبذة</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إيليت سبا – Elite Spa</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin:0; padding:0; }
+    html, body { width:100%; font-family: 'Vazirmatn', 'Tahoma', 'Arial', sans-serif; background-color:#fff8f5; color:#7D382A; scroll-behavior:smooth;}
+    a { text-decoration:none; color:inherit; }
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    #lang-toggle { position:absolute; top:20px; right:20px; padding:10px 18px; border-radius:25px; border:none; font-weight:700; cursor:pointer; background-color:#A47E4F; color:#fff; transition:0.3s; z-index:50;}
+    #lang-toggle:hover { background-color:#5E3E26; }
 
-    <!-- AOS CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    body.rtl { direction:rtl; text-align:right; }
+    body.ltr { direction:ltr; text-align:left; }
 
-    <style>
-        body {
-            background: linear-gradient(to right, #4b3a06, #af8200, #4b3a06);            background-color: #4b3a06;
-            color: white;
-            font-family: 'Amiri', serif;
-            text-align: center;
-        }
+    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
 
-        .profile-img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
+    header { background-color:#FCEFE9; padding:80px 20px 50px; position:relative; text-align:center; box-shadow:0 4px 12px rgba(0,0,0,0.05);}
+    header h2 { font-size:3em; color:#A47E4F; margin-bottom:10px; font-weight:700; }
+    header p { font-size:1.4em; color:#7D382A; font-weight:400; }
 
-        h3, h4 {
-            font-family: 'Amiri', serif;
-            color: #f4e142;
-            text-shadow: 2px 2px 5px rgb(7, 7, 7);
-        }
-        h5{ font-family: 'Amiri', serif;
-            color: #f4e142;
-            text-shadow: 2px 2px 5px rgb(7, 7, 7);}
+    .packages { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; padding:60px 0;}
+    .package { background:#fff; border-radius:15px; border:1px solid #F0E5E2; box-shadow:0 8px 20px rgba(0,0,0,0.08); width:300px; display:flex; flex-direction:column; padding:30px; transition: transform 0.3s, box-shadow 0.3s;}
+    .package:hover { transform:translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,0.15); border-color:#A47E4F;}
+    .package h2 { color:#A47E4F; font-size:1.6em; margin-bottom:15px; text-align:center; border-bottom:2px solid #F0E5E2; padding-bottom:10px;}
+    .package .duration, .package .price { font-weight:700; text-align:center; margin:12px 0; color:#7D382A; font-size:1.1em; }
+    .package ul { list-style:none; padding-left:0; flex-grow:1; margin-top:20px; }
+    .package ul li { position:relative; padding-left:25px; margin-bottom:12px; line-height:1.6; color:#555555;}
+    body.rtl .package ul li { padding-left:0; padding-right:25px; text-align:right; }
+    body.rtl .package ul li::before { content:"•"; position:absolute; right:0; top:0; color:#A47E4F; font-size:1.4em; font-weight:bold; }
+    body.ltr .package ul li::before { content:"•"; position:absolute; left:0; top:0; color:#A47E4F; font-size:1.4em; font-weight:bold; }
 
-        ul,p {
-            text-shadow: 2px 2px 5px rgba(5, 7, 5, 0.5);
-            font-size: 18px;
-        }
+    .call-to-action { display:block; text-align:center; background-color:#A47E4F; color:#fff; padding:15px 0; margin-top:20px; border-radius:8px; font-weight:700; transition:0.3s; }
+    .call-to-action:hover { background-color:#5E3E26; }
 
-        .social-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-            align-items: center;
-        }
+    footer { background-color:#FCEFE9; padding:25px; text-align:center; color:#7D382A; font-size:0.9em; }
 
-        .btn-custom {
-            background-color: rgba(0, 0, 0, 0.2);
-            color: white;
-            padding: 12px;
-            border-radius: 15px;
-            font-size: 18px;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: right;
-            width: 90%;
-            max-width: 600px;
-            box-sizing: border-box;
-            text-decoration: none;
-            transition: all 0.3s ease;
-           
-        }
-        .social-buttons #a1 {
-    background-color: rgba(189, 168, 168, 0);
-    font-size: 20px;
-}
-     
-
-        .btn-custom:hover {
-            background-color: rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-custom img {
-            width: 40px;
-            height: 40px;
-            margin-left: 10px;
-            margin-right: 20px;
-        }
-
-        .floating-call {
-            position: fixed;
-            bottom: 40px;
-            left: 20px;
-            background-color: transparent;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 7px 14px rgba(4, 247, 4, 0.5);
-            overflow: hidden;
-            z-index: 100;
-        }
-
-        .floating-call img {
-            width: 120%;
-            height: 120%;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-    </style>
+    @media(max-width:1024px) { .package { width:45%; } }
+    @media(max-width:768px) { .packages { flex-direction:column; align-items:center; } .package { width:90%; max-width:400px; } header h2 { font-size:2.2em; } }
+</style>
 </head>
-<body>
+<body class="rtl">
 
-    <div class="container mt-5">
-        <!-- Header Section -->
-        <div class="row text-center">
-            <div class="col-12">
-                <h4 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">الصناعي الشيخ</h4>
-                <h3 data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">رائد عباس يوسف الخزرجي ( ابو ضحىٰ )</h3>
-            </div>
-        </div>
-<br>
-        <!-- Image Section -->
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-12">
-                <img src="assets/img/portfolio/p1.jpg" alt="Profile Picture" class="profile-img" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500" loading="lazy">
-            </div>
-        </div>
-        <br>
-
-        <a href="#a" id="cv-button">
-            <img src="assets/img/portfolio/about.png" alt="CV Icon" loading="lazy">
-        </a>
-
-        <div id="a"></div>
-     <!---------------------------start---------------------------------->
-     <br><br>
-<div class="row mt-5">
-    <div class="col-12">
-        <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">التولد: بغداد-1965</p>
-        <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">التحصيل الدراسي ميكانيك</p>
-        <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="600"> دبلوم قسم تصنيع المعادن - بغداد (1986 - 1987)</p>
-
+<header>
+    <div class="container">
+        <button id="lang-toggle" onclick="toggleLanguage()">English / کوردی / عربي</button>
+        <h2 data-ar="إيليت سبا – Elite Spa" data-en="Elite Spa" data-ku="ئێلیت سپا – Elite Spa">إيليت سبا – Elite Spa</h2>
+        <p data-ar="لمسة أصيلة من أجل رفاهية عصرية" data-en="An authentic touch for modern luxury" data-ku="دەست لێدانێكی ڕەسەن بۆ خۆشگوزەرانییەکی مۆدێرن">لمسة أصيلة من أجل رفاهية عصرية</p>
     </div>
-</div>
- <!---------------------------start---------------------------------->
+</header>
 
-<div class="row mt-5">
-    <div class="col-12">
-    <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">----------------------------</p>
-        <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">المؤهلات</h5>
-        <br>
+<section class="packages">
+
+    <!-- Regular -->
+    <div class="package">
+        <h2 data-ar="🕐 العادي – Regular" data-en="🕐 Regular" data-ku="🕐 ئاسایی – Regular">🕐 العادي – Regular</h2>
+        <div class="duration" data-ar="المدة: 60 دقيقة" data-en="Duration: 60 Minutes" data-ku="ماوە: 60 خولەك">المدة: 60 دقيقة</div>
+        <div class="price" data-ar="السعر: 87,000 دينار عراقي" data-en="Price: 87,000 IQD" data-ku="نرخ: 87,000 دیناری عێراقی">السعر: 87,000 دينار عراقي</div>
         <ul>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">نلت المرتبة الرابعة بالتسلسل على دفعتي الدراسية <br>ومن خلالها تم انتخابي للعمل في اهم الدوائر المتخصصة بالبحوث العلمية والتقنية آنذاك.</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">أمتلك عدة معامل تصنيع المنتجات البلاستيكية <br>داخل العراق وخارجه.</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">شاركت في توفير المنتجات والسلع اللدائنية المختلفة <br>ورفد الاسواق المحلية اثناء الحصار الاقتصادي <br>على بلدنا الذي بدأ سنة (1990).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو اتحاد الصناعات العراقية (2008).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">عضو مجموعة الصناعيين العراقيين.</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">حاصل على شهادة براءة اختراع (الملكية الصناعية)<br> في مجال الصناعات اللدائنية من الجهاز المركزي <br>للتقييس والسيطرة النوعية سنة (2020).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">من خلال انتسابي إلى غرفة تجارة بغداد سنة (2010) شاركت بـتجهيز شركات وزارة الصناعة والمعادن <br>بمواد التعبئة والتغليف ضمن المواصفات القياسية المعتمدة ومن اهم هذه الشركات:</li>
-            <ul>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الزيوت النباتية.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">الشركة العامة لصناعة الادوية والمستلزمات الطبية / سامراء.</li>
-                <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">مصانع البان ابو غريب.</li>
-            </ul>
+            <li data-ar="تدليك كامل للجسم" data-en="Full Body Massage" data-ku="مەساجی تەواوی جەستە">تدليك كامل للجسم</li>
         </ul>
+        <a href="tel:+9647714444008" class="call-to-action" data-ar="احجز الآن" data-en="Book Now" data-ku="ئێستا داوای بکە">📞 احجز الآن</a>
     </div>
-</div>
 
-<div class="row mt-5">
-    <div class="col-12">
-        <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">----------------------------</p>
-        <h5 data-aos="fade-up" data-aos-duration="400" data-aos-delay="500">النشاط المدني والإنساني</h5>
-        <br>
+    <!-- VIP -->
+    <div class="package">
+        <h2 data-ar="💎 كبار الشخصيات – VIP" data-en="💎 VIP" data-ku="💎 کەسایەتی تایبەت – VIP">💎 كبار الشخصيات – VIP</h2>
+        <div class="duration" data-ar="المدة: 90 دقيقة" data-en="Duration: 90 Minutes" data-ku="ماوە: 90 خولەك">المدة: 90 دقيقة</div>
+        <div class="price" data-ar="السعر: 116,000 دينار عراقي" data-en="Price: 116,000 IQD" data-ku="نرخ: 116,000 دیناری عێراقی">السعر: 116,000 دينار عراقي</div>
         <ul>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">أحد شيوخ ووجهاء قبيلة خزرج <br>والمكنى ( أبو ضحى الخزرجي ) <br>حيث تشرفت بتمثيل أعمامي منذ عام (1994).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="550">تشرفت بالمشاركة الفعّالة والرئيسية في بناء وتوسيع <br>جامع وحسينية الامام المنتظر (عج) <br>بمدينة الحرية الكريمة عام (1998).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">من المؤسسين والركائز المهمة لموكب أنصار الرسول (ص) الكاظمية المقدسة (مقابل جسر الكريعات).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">كان لي الشرف في ان اكون الداعم الرئيسي <br>في تشييد حسينية انصار الرسول (ص)<br> في منطقة الشيخ سعد (2017).</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">إسنادنا لفتوى الجهاد الكفائي من خلال الدعم اللوجيستي في جبهات التصدي امام داعش.</li>
-            <li data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">تصنيع وتجهيز المستلزمات الطبية و على وجه الخصوص أجهزة إعطاء الأوكسجين خلال فترة جائحة كورونا (2020-2023).</li>
+            <li data-ar="تدليك كامل للجسم" data-en="Full Body Massage" data-ku="مەساجی تەواوی جەستە">تدليك كامل للجسم</li>
+            <li data-ar="ساونا، بخار، جاكوزي" data-en="Sauna, Steam, Jacuzzi" data-ku="ساوونا، ژوورى هەڵم، جاکوزی">ساونا، بخار، جاكوزي</li>
+            <li data-ar="حمّام تركي (Body Scrubbing)" data-en="Turkish Bath (Scrubbing)" data-ku="حەمامی تورکی (لێفکردنی جەستە)">حمّام تركي (Body Scrubbing)</li>
+            <li data-ar="غرفة VIP خاصة" data-en="Private VIP Room" data-ku="ژووری تایبەتی VIP">غرفة VIP خاصة</li>
         </ul>
-    </div>
-</div>
-<!---------------------------end---------------------------------->
-
-
-
-        <!-- Social Buttons Section -->
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
-                <div class="social-buttons">
-                    <p data-aos="fade-up" data-aos-duration="400" data-aos-delay="600">-------------------------------------------</p>
-                    <h3 class="btn btn-custom w-100 d-flex align-items-center flex-row justify-content-center" id="a1"  data-aos="fade-up" data-aos-duration="400" data-aos-delay="610">            الصفحات الرسمية                     </h3>
-                    <p class="btn btn-custom w-100 d-flex align-items-center flex-row justify-content-center" id="a1"  data-aos="fade-up" data-aos-duration="400" data-aos-delay="615">            الصناعي الشيخ رائد عباس الخزرجي                   </p>
-
-                    
-                    <!-- Facebook -->
-                    <a href="https://www.facebook.com/abw.dhy.alkhzrjy.364729?mibextid=wwXIfr&mibextid=wwXIfr" data-aos="fade-up" data-aos-duration="400" data-aos-delay="615" class="btn btn-custom w-100 d-flex align-items-center flex-row">
-                        <img loading="lazy" src="assets/img/portfolio/facebook.png" alt="Facebook" class="me-3" style="width: 40px; height: 40px;">
-                        <span class="text-truncate" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">رائد عباس الخزرجي</span>
-                    </a>
-                    <!-- WhatsApp -->
-                    <a href="https://www.tiktok.com/@raed__alkhazrjy?_t=ZS-8voVOx0rpeU&_r=1" data-aos="fade-up" data-aos-duration="400" data-aos-delay="615" class="btn btn-custom w-100 d-flex align-items-center flex-row">
-                        <img  src="assets/img/portfolio/IMG_0328.png" alt="WhatsApp" class="me-3" style="width: 40px; height: 40px;" loading="lazy">
-                        <span class="text-truncate" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raed__alkhazrjy@</span>
-                    </a>
-                    <!-- Twitter -->
-                    <a href="https://x.com/raed_alkhazrjy?t=sRDptH0NodNpY0t-Wz55jQ&s=08" data-aos="fade-up" data-aos-duration="400" data-aos-delay="620"  class="btn btn-custom w-100 d-flex align-items-center flex-row">
-                        <img  src="assets/img/portfolio/x.png" alt="Twitter" class="me-3" style="width: 40px; height: 40px;" loading="lazy">
-                        <span class="text-truncate" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raed_alkhazrjy@</span>
-                    </a>
-                
-                    <!-- Instagram -->
-                    <a href="https://www.instagram.com/raed_alkhazrjy/profilecard/?igsh=MXIxNzY2MGllY3Q1OQ==" data-aos="fade-up" data-aos-duration="400" data-aos-delay="620" class="btn btn-custom w-100 d-flex align-items-center flex-row">
-                        <img  src="assets/img/portfolio/instagram.png" alt="Instagram" class="me-3" style="width: 40px; height: 40px;" loading="lazy">
-                        <span class="text-truncate" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raed_alkhazrjy@</span>
-                    </a>
-                    <!-- Gmail -->
-                    <a href="mailto:raedkhazraj@gmail.com" data-aos="fade-up" data-aos-duration="400" data-aos-delay="620" class="btn btn-custom w-100 d-flex align-items-center flex-row">
-                        <img  src="assets/img/portfolio/gmail.png" alt="Gmail" class="me-3" style="width: 40px; height: 40px;" loading="lazy">
-                        <span class="text-truncate" style="font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">raedkhazraj@gmail.com</span>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-        
-<br><br><br><br><br><br><br><br>
-        <!-- Floating Call Icon -->
-        <a loading="lazy" href="tel:+9647878700078" class="floating-call" data-aos="fade-up" data-aos-duration="400" data-aos-delay="30">
-            <img src="assets/img/portfolio/call.png" alt="Call" loading="lazy">
-        </a>
-
+        <a href="tel:+9647714444008" class="call-to-action" data-ar="احجز الآن" data-en="Book Now" data-ku="ئێستا داوای بکە">📞 احجز الآن</a>
     </div>
 
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
+    <!-- VVIP -->
+    <div class="package">
+        <h2 data-ar="👑 كبار الشخصيات جدًا – VVIP" data-en="👑 VVIP" data-ku="👑 کەسایەتی زۆر تایبەت – VVIP">👑 كبار الشخصيات جدًا – VVIP</h2>
+        <div class="duration" data-ar="المدة: 105 دقائق" data-en="Duration: 105 Minutes" data-ku="ماوە: 105 خولەك">المدة: 105 دقائق</div>
+        <div class="price" data-ar="السعر: 145,000 دينار عراقي" data-en="Price: 145,000 IQD" data-ku="نرخ: 145,000 دیناری عێراقی">السعر: 145,000 دينار عراقي</div>
+        <ul>
+            <li data-ar="تدليك كامل للجسم" data-en="Full Body Massage" data-ku="مەساجی تەواوی جەستە">تدليك كامل للجسم</li>
+            <li data-ar="ساونا، بخار، جاكوزي" data-en="Sauna, Steam, Jacuzzi" data-ku="ساوونا، ژوورى هەڵم، جاکوزی">ساونا، بخار، جاكوزي</li>
+            <li data-ar="حمّام تركي (Body Scrubbing)" data-en="Turkish Bath (Scrubbing)" data-ku="حەمامی تورکی (لێفکردنی جەستە)">حمّام تركي (Body Scrubbing)</li>
+        </ul>
+        <a href="tel:+9647714444008" class="call-to-action">📞 احجز الآن</a>
+    </div>
 
-      
+</section>
 
+<footer>
+    <div class="container">
+        <span data-ar="جميع الحقوق محفوظة © إيليت سبا 2025" data-en="All rights reserved © Elite Spa 2025" data-ku="سەرجەم مافەکان پارێزراون © ئێلیت سپا 2025">جميع الحقوق محفوظة © إيليت سبا 2025</span>
+    </div>
+</footer>
 
-        AOS.init();
-    </script>
-    <script>
-  document.addEventListener("contextmenu", function (event) {
-    event.preventDefault();
-  });
+<script>
+const availableLangs=['ar','en','ku'];
+let currentLang='ar';
+function toggleLanguage(){
+    const body=document.body;
+    const toggleButton=document.getElementById('lang-toggle');
+    const currentIndex=availableLangs.indexOf(currentLang);
+    const nextIndex=(currentIndex+1)%availableLangs.length;
+    currentLang=availableLangs[nextIndex];
+
+    body.classList.remove('rtl','ltr');
+    if(currentLang==='ar'||currentLang==='ku'){body.classList.add('rtl');}
+    else{body.classList.add('ltr');}
+
+    if(currentLang==='ar'){toggleButton.textContent='English / کوردی / عربي';}
+    else if(currentLang==='en'){toggleButton.textContent='عربي / کوردی / English';}
+    else{toggleButton.textContent='English / عربي / کوردی';}
+
+    document.querySelectorAll('[data-ar]').forEach(el=>{
+        const newText=el.getAttribute(`data-${currentLang}`);
+        if(newText){el.textContent=newText;}
+    });
+}
 </script>
 
 </body>
